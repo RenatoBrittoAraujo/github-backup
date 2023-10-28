@@ -29,3 +29,17 @@ Do you want to also download forks? (y/n) n
 
 [success] all repos saved in zip file renatobrittoaraujo-github-repos-01/01/70-00-00-00.zip
 ```
+
+## Extras
+
+File generated may be too big. You can solve this by simply splitting it up inside a folder:
+
+```
+Lets says I have an image and its too big (10MB). All I do is:
+
+split --bytes=1M /path/to/image/image.jpg /path/to/image/prefixForNewImagePieces
+
+and then to put it together I use cat:
+
+cat prefixFiles* > newimage.jpg
+```
